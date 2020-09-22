@@ -6,7 +6,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 
-	"github.com/Huangkai1008/kit/pkg/constant"
+	kitmsg "github.com/Huangkai1008/kit/pkg/message"
 )
 
 // Options is a struct for specifying configuration options for the JWT.
@@ -27,7 +27,7 @@ func NewOptions(v *viper.Viper) (*Options, error) {
 	)
 
 	if err = v.UnmarshalKey("jwt", o); err != nil {
-		return nil, errors.Wrap(err, constant.LoadConfigError)
+		return nil, errors.Wrap(err, kitmsg.LoadConfigError)
 	}
 	return o, err
 }

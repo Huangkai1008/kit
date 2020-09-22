@@ -13,7 +13,7 @@
 
 2. Get the project
 ```bash
-go -get https://github.com/Huangkai1008/kit
+go get github.com/Huangkai1008/kit
 ```
 ## License
 [MIT](https://www.mit-license.org/)
